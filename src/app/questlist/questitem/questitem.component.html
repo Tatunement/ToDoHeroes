@@ -1,0 +1,10 @@
+<a class="list-group-item clearfix d-flex justify-content-between" style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active">
+  <div class="pull-left">
+    <h5 class="list-group-item-heading">Quest: {{ quest.questName }}</h5>
+    <p class="list-group-item-text">Description: {{quest.questDescription}}</p>
+  </div>
+  <div class="pull-right">
+    <p class="list-group-item-text">{{quest.questType}}</p>
+    <p class="list-group-item-text">{{questTimer}}</p>
+  </div>
+</a>

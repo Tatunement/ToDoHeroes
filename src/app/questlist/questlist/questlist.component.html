@@ -1,0 +1,27 @@
+<router-outlet></router-outlet>
+<div class="container-md">
+  <div class="row border">
+    <div class="col-md-12 d-flex justify-content-between">
+      <div class="pull-left img">
+        <img src="{{playerInfo.sprite}}" alt="" class="img-thumbnail">
+      </div>
+      <div class="pull-right">
+        <h5>Hp: {{playerInfo.currentHP}}/{{maxHp}}</h5>
+        <h5>Exp: {{playerInfo.experience}}</h5>
+        <h5>Coins: {{playerInfo.coins}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-md border">
+  <div class="row padding">
+    <div class="col-md-12">
+      <app-questitem *ngFor="let questEl of questList;let i = index" [quest]="questEl" [index]="i"></app-questitem>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-center">
+      <button class="btn btn-success margin" (click)="onAddQuest()">+</button>
+    </div>
+  </div>
+</div>
