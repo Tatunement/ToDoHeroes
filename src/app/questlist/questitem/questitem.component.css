@@ -1,3 +1,11 @@
 .list-group-item{
   margin-top: 5px;
+  background-color: rgb(167, 128, 30);
+  border-radius: 15px;
+  border: 5px groove darkgoldenrod;
+  color: rgb(66, 48, 0);
+}
+
+.list-group-item:hover {
+  background-color: rgb(211, 163, 43);
 }

@@ -1,6 +1,6 @@
 <div class="backdrop" (click)="onClose()"></div>
 <div class="alert-box">
-  <div class="row border">
+  <div class="row">
     <div class="d-flex justify-content-between">
       <div>
         <h3>Name: {{ quest.questName }}</h3>
@@ -11,11 +11,11 @@
         <h4>Ends in: {{ questTimer }}</h4>
       </div>
     </div>
-    <div class="row border description">
+    <div class="row description">
       <p>{{ quest.questDescription }}</p>
     </div>
   </div>
-  <div class="row border">
+  <div class="row">
     <form [formGroup]="objForm" (ngSubmit)="onSubmit()">
       <div formArrayName="objectives">
         <div class="form-check" *ngFor="let objective of quest.questObjectives; let i = index" [formGroupName]="i">

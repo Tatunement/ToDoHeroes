@@ -52,7 +52,7 @@
     <div class="row">
       <div class="col-md-12" formArrayName="questObjectives">
         <div
-          class="row"
+          class="row objectives"
           *ngFor="let objectiveCtrl of controls; let i = index"
           [formGroupName]="i"
           style="margin-top: 10px"
@@ -78,7 +78,7 @@
           </div>
         </div>
         <hr />
-        <div class="row">
+        <div class="row buttons">
           <div class="col-md-12">
             <button
               class="btn btn-success"
@@ -93,7 +93,7 @@
     </div>
   <div class="alert-box-actions" style="margin-top: 10px;">
     <button class="btn btn-success" type="submit" (click)="onSubmit()" [disabled]="!questForm.valid">Save</button>
-    <button class="btn btn-primary" type="button" (click)="onClose()">
+    <button class="btn btn-danger" type="button" (click)="onClose()">
       Close
     </button>
   </div>

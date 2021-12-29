@@ -1,0 +1,13 @@
+.navbar.navbar-expand-lg.navbar-light {
+  background-color: goldenrod;
+  border-bottom: groove 5px darkgoldenrod;
+}
+
+.btn.btn-primary {
+  border: 3px groove rgb(151, 0, 0);
+  background-color: red;
+}
+
+.btn.btn-primary:focus {
+  box-shadow: none;
+}

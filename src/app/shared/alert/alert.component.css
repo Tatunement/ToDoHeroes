@@ -15,7 +15,8 @@
     width: 60vw;
     padding: 16px;
     z-index: 100;
-    background-color:  white;
+    background-color:deepskyblue;
+    border: 5px groove darkgoldenrod;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26)
 }
 

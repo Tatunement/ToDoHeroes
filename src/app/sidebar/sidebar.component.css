@@ -1,0 +1,16 @@
+.sidebar{
+  color: rgb(66, 48, 0);
+  border-right: solid 2px darkgoldenrod;
+  background-color: goldenrod;
+}
+
+.list-group {
+  border-bottom: groove 5px darkgoldenrod;
+  color: sandybrown;
+}
+
+.list-group-item {
+  border: groove 5px darkgoldenrod;
+  background-color: rgb(255, 183, 0);
+  color:rgb(66, 48, 0);
+}

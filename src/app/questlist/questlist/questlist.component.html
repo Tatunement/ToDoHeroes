@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 <div class="container-md">
-  <div class="row border">
+  <div class="row">
     <div class="col-md-12 d-flex justify-content-between">
       <div class="pull-left img">
         <img src="{{playerInfo.sprite}}" alt="" class="img-thumbnail">
@@ -13,7 +13,7 @@
     </div>
   </div>
 </div>
-<div class="container-md border">
+<div class="container-md">
   <div class="row padding">
     <div class="col-md-12">
       <app-questitem *ngFor="let questEl of questList;let i = index" [quest]="questEl" [index]="i"></app-questitem>

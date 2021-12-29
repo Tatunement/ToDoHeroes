@@ -5,3 +5,24 @@
 .button-group {
   margin: 10px;
 }
+
+.row {
+  background-color: goldenrod;
+  border-radius: 15px;
+  border: 5px groove darkgoldenrod;
+}
+
+.btn.btn-primary {
+  border: 3px groove rgb(151, 0, 0);
+  background-color: red;
+}
+
+.col-md-12 {
+  color: rgb(66, 48, 0)
+}
+
+.btn.btn-primary:focus {
+  box-shadow: none;
+}
+
+
