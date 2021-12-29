@@ -23,7 +23,7 @@ import { CharacterCreationModule } from './character-creation/character-creation
   ],
   imports: [
     FormsModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,

@@ -20,6 +20,7 @@ export class PlayerCharacter {
     public experience: number,
     public abilityScores: AbilityScores,
     public questList: Quest[],
-    public inventory: Item[]
+    public inventory: Item[],
+    public onlineMode?: boolean
   ) {}
 }

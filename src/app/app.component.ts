@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from './services/auth.service';
 import { DataStorageService } from './services/data-storage.service';
+import { PlayerCharacter } from './shared/player.model';
 
 @Component({
   selector: 'app-root',

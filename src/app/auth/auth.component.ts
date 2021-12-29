@@ -47,7 +47,7 @@ export class AuthComponent implements OnInit {
     authObs.subscribe(
       (resData) => {
         console.log(resData);
-        this.HandleRouting()
+        this.HandleRouting();
       },
       (errorMessage) => {
         console.log(errorMessage);
@@ -66,13 +66,12 @@ export class AuthComponent implements OnInit {
 
   private HandleRouting() {
     if (this.isLoginMode) {
-      this.dataStorage.fetchPlayer()
-      this.dataStorage.fetchQuest().subscribe()
-      setTimeout(() => {
-        this.router.navigate(["questlist"])
-      },1000)
+      this.dataStorage.fetchPlayer();
+      this.dataStorage.fetchQuest().subscribe(() => {
+        this.router.navigate(['questlist']);
+      });
     } else {
-      this.router.navigate(["charactercreation"])
+      this.router.navigate(['charactercreation']);
     }
   }
 }
