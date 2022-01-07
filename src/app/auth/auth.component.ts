@@ -68,7 +68,7 @@ export class AuthComponent implements OnInit {
     if (this.isLoginMode) {
       this.dataStorage.fetchPlayer();
       this.dataStorage.fetchQuest().subscribe(() => {
-        this.router.navigate(['questlist']);
+        this.router.navigate(['questlist'])
       });
     } else {
       this.router.navigate(['charactercreation']);

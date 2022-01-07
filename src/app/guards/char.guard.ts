@@ -26,7 +26,7 @@ export class CharGuard implements CanActivate {
     | Observable<boolean | UrlTree> {
     return this.playerService.playerChanges.pipe(
       map((player) => {
-        const isCreated = !!Object.keys(player.origin).length;
+        const isCreated = !!player
         if (isCreated) {
           return true
         }

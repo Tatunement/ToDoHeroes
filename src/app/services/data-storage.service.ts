@@ -90,17 +90,24 @@ export class DataStorageService {
       )
       .pipe(
         map((quests) => {
-          return quests.map((quest: Quest) => {
-            return {
-              ...quest,
-              questObjectives: quest.questObjectives
-                ? quest.questObjectives
-                : [],
-            };
-          });
+          const isQuestlist = !!quests
+          if (isQuestlist) {
+            return quests.map((quest: Quest) => {
+              return {
+                ...quest,
+                questObjectives: quest.questObjectives
+                  ? quest.questObjectives
+                  : [],
+              };
+            });
+          }
+          return quests
         }),
         tap((quests) => {
-          this.QLService.setQuests(quests);
+          const isQuestlist = !!quests;
+          if (isQuestlist) {
+            this.QLService.setQuests(quests);
+          }
           this.subscription.unsubscribe();
         })
       );

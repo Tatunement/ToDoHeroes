@@ -1,8 +1,7 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from './services/auth.service';
 import { DataStorageService } from './services/data-storage.service';
-import { PlayerCharacter } from './shared/player.model';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +26,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe()
+    if (this.subscription) {
+      this.subscription.unsubscribe()
+    }
   }
 }
