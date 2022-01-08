@@ -127,7 +127,7 @@ export class AuthService {
     console.log(errorRes);
     let errorMessage = 'An unknown error occurred';
     if (!errorRes.error || !errorRes.error.error) {
-      return throwError(errorMessage);
+      return throwError(() => new Error(errorMessage));
     }
     switch (errorRes.error.error.message) {
       case 'EMAIL_EXISTS':
@@ -140,6 +140,6 @@ export class AuthService {
         errorMessage = 'This password is not correct.';
         break;
     }
-    return throwError(errorMessage);
+    return throwError(() => new Error(errorMessage));
   }
 }

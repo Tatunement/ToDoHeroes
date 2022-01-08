@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { PlayerCharacter } from '../shared/player.model';
 import { PlayerService } from './player.service';
-import { map, take, tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { QuestlistService } from './questlist.service';
 import { Quest } from '../shared/quest.model';
 import { AuthService } from './auth.service';
@@ -72,8 +72,8 @@ export class DataStorageService {
       )
       .subscribe((data) => {
         this.playerService.setPlayer(data);
+        this.subscription.unsubscribe();
       });
-    this.subscription.unsubscribe();
   }
 
   fetchQuest() {

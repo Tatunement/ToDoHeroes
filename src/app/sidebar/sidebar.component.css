@@ -14,3 +14,7 @@
   background-color: rgb(255, 183, 0);
   color:rgb(66, 48, 0);
 }
+
+.active {
+  background-color: rgb(173, 124, 0);
+}
